@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
 
   patch '/recipes' do
 
-    @recipe = Recipe.find_by(params[:name])
+    # @recipe = Recipe.find_by(params[:name])
 
     @recipe.name = params[:name]
     @recipe.ingredients = params[:ingredients]
