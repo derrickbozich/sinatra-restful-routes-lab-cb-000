@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  post 'recipes' do
+  post '/recipes' do
     binding.pry
     @recipe = Recipe.create(params)
     redirect '/recipes'
