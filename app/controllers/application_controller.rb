@@ -13,11 +13,14 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-
-
   get '/recipes/:id' do
     @recipe = Recipe.find_by(params[:id])
     erb :show
+  end
+
+  get '/recipes/:id/edit' do
+    @recipe = Recipe.find_by(params[:id])
+    erb :edit
   end
 
   post '/recipes' do
@@ -26,10 +29,7 @@ class ApplicationController < Sinatra::Base
 
   end
 
-  get '/recipes/:id/edit' do
-    @recipe = Recipe.find_by(params[:id])
-    erb :edit
-  end
+
 
   patch '/recipes/:id' do
     @recipe = Recipe.find_by(params[:id])
