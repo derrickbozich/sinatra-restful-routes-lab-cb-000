@@ -23,5 +23,9 @@ class ApplicationController < Sinatra::Base
     redirect '/recipes/:id'
   end
 
+  get '/recipes/:id/edit' do
+    erb :edit
+  end
+
 
 end
