@@ -29,7 +29,6 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/recipes' do
-    
     @recipe = Recipe.find_by(params[:id])
 
     @recipe.name = params[:name]
