@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/recipes/:id/delete' do
-    binding.pry
+    
     @recipe = Recipe.find_by(params[:id])
 
     @recipe.delete
