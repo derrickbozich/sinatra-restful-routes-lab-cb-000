@@ -17,5 +17,10 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
+  post 'recipes' do
+    binding.pry
+    @recipe = Recipe.create(params)
+  end
+
 
 end
