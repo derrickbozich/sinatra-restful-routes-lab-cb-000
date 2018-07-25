@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
   end
-  
+
   get '/' do
     erb :index
   end
@@ -12,5 +12,5 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  
+
 end
