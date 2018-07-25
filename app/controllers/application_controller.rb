@@ -20,6 +20,7 @@ class ApplicationController < Sinatra::Base
   post 'recipes' do
     binding.pry
     @recipe = Recipe.create(params)
+    redirect '/recipes'
   end
 
 
